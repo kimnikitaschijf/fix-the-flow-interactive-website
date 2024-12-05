@@ -1,29 +1,40 @@
 * {
-    scroll-behavior: smooth; /* Zorgt voor vloeiende scrollbewegingen */
+    scroll-behavior: smooth;
+    /* Zorgt voor vloeiende scrollbewegingen */
     margin: 0;
     max-width: 100%;
     padding: 0;
-    box-sizing: border-box; /* Zorgt ervoor dat padding en borders de afmetingen niet beïnvloeden */
+    box-sizing: border-box;
+    /* Zorgt ervoor dat padding en borders de afmetingen niet beïnvloeden */
 }
 
 /* nav lijst layout */
 ul {
     color: var(--primary-text-color);
-    display: flex; /* Flexbox om de nav-items in een rij te plaatsen */
-    justify-content: right; /* Zorgt dat de items rechts uitgelijnd worden */
-    gap: 70px; /* Creëert ruimte tussen de list-items */
-    position: sticky; /* Zorgt ervoor dat de nav sticky blijft bij scrollen */
+    display: flex;
+    /* Flexbox om de nav-items in een rij te plaatsen */
+    justify-content: right;
+    /* Zorgt dat de items rechts uitgelijnd worden */
+    gap: 70px;
+    /* Creëert ruimte tussen de list-items */
+    position: sticky;
+    /* Zorgt ervoor dat de nav sticky blijft bij scrollen */
     margin: 0em 3em 1em 1em;
-    transition: transform .3s ease-in-out; /* Voeg een overgang toe voor animatie */
-    list-style: none; /* Verwijdert bullet points */
-    z-index: 99; /* Zorgt ervoor dat de nav boven andere elementen blijft */
+    transition: transform .3s ease-in-out;
+    /* Voeg een overgang toe voor animatie */
+    list-style: none;
+    /* Verwijdert bullet points */
+    z-index: 99;
+    /* Zorgt ervoor dat de nav boven andere elementen blijft */
     text-decoration: none;
 }
 
 /* nav op hover */
 ul :hover {
-    transform: scale(1.1); /* Vergroot de tekst een beetje wanneer eroverheen wordt gehoverd */
-    text-decoration: underline; /* Voegt een onderstreping toe bij hover */
+    transform: scale(1.1);
+    /* Vergroot de tekst een beetje wanneer eroverheen wordt gehoverd */
+    text-decoration: underline;
+    /* Voegt een onderstreping toe bij hover */
 }
 
 /* nav */
@@ -43,7 +54,8 @@ li {
 }
 
 .logo :hover {
-    transform: scale(1.1); /* Vergroot het logo wanneer eroverheen wordt gehoverd */
+    transform: scale(1.1);
+    /* Vergroot het logo wanneer eroverheen wordt gehoverd */
 }
 
 /* header */
@@ -52,7 +64,8 @@ header {
     background-size: cover;
     height: 80vh;
     padding: 0em 0em 5em 0em;
-    position: relative; /* Zorgt ervoor dat de header in de normale flow zit */
+    position: relative;
+    /* Zorgt ervoor dat de header in de normale flow zit */
 }
 
 /* header titel */
@@ -70,7 +83,8 @@ header a {
     position: relative;
     color: var(--primary-text-color);
     text-decoration: none;
-    font-size: clamp(1rem, 0.9559rem + 0.2353vw, 1.25rem); /* Zorgt voor responsieve lettergrootte */
+    font-size: clamp(1rem, 0.9559rem + 0.2353vw, 1.25rem);
+    /* Zorgt voor responsieve lettergrootte */
 }
 
 /* gradient over background image */
@@ -91,7 +105,8 @@ header a {
     padding: 1em 0em 0em 0em;
     z-index: 99;
     position: relative;
-    font-size: clamp(4.0625rem, 3.4559rem + 3.2353vw, 7.5rem); /* Responsieve lettergrootte */
+    font-size: clamp(4.0625rem, 3.4559rem + 3.2353vw, 7.5rem);
+    /* Responsieve lettergrootte */
 }
 
 h1 [span] {
@@ -100,8 +115,10 @@ h1 [span] {
 
 /* layout hele blok */
 .blok {
-    display: flex; /* Flexbox zorgt voor dynamische uitlijning van de inhoud */
-    flex-direction: column; /* Zet de inhoud in een kolom */
+    display: flex;
+    /* Flexbox zorgt voor dynamische uitlijning van de inhoud */
+    flex-direction: column;
+    /* Zet de inhoud in een kolom */
     align-items: center;
     border-radius: 15px;
     min-width: 25rem;
@@ -111,6 +128,109 @@ h1 [span] {
     margin-top: -20px;
     max-width: 1400px;
 }
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.slides-fade {
+    display: none;
+}
+
+.slides-fade img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 
 /* Normal Flow: De kleuren behouden */
 .kleur1,
@@ -139,10 +259,14 @@ h1 [span] {
 
 /* photo-grid met grid layout */
 .photo-grid {
-    display: grid; /* Grid layout zorgt voor flexibele plaatsing van afbeeldingen */
-    grid-template-columns: repeat(3, 1fr); /* Maakt 3 gelijke kolommen */
-    grid-template-rows: repeat(3, 1fr); /* Maakt 3 gelijke rijen */
-    gap: 50px; /* Ruimte tussen de grid items */
+    display: grid;
+    /* Grid layout zorgt voor flexibele plaatsing van afbeeldingen */
+    grid-template-columns: repeat(3, 1fr);
+    /* Maakt 3 gelijke kolommen */
+    grid-template-rows: repeat(3, 1fr);
+    /* Maakt 3 gelijke rijen */
+    gap: 50px;
+    /* Ruimte tussen de grid items */
     padding: 20px;
 }
 
@@ -159,7 +283,8 @@ h1 [span] {
 
 .photo:hover {
     opacity: 0.8;
-    transform: scale(1.1); /* Vergroot de afbeelding bij hover */
+    transform: scale(1.1);
+    /* Vergroot de afbeelding bij hover */
 }
 
 /* layout tekst in blokjes */
@@ -172,12 +297,14 @@ h1 [span] {
     width: 80%;
     margin: 1em;
     border-radius: 15px;
-    object-fit: cover; /* Zorgt ervoor dat de afbeelding netjes wordt bijgesneden */
+    object-fit: cover;
+    /* Zorgt ervoor dat de afbeelding netjes wordt bijgesneden */
 }
 
 /* tekst stukje over samenwerken */
 .samenwerken {
-    display: flex; /* Flexbox voor dynamische plaatsing van tekst en afbeelding */
+    display: flex;
+    /* Flexbox voor dynamische plaatsing van tekst en afbeelding */
     justify-content: space-between;
     align-items: center;
     padding: 40px;
@@ -287,7 +414,8 @@ h1 [span] {
 @media screen and (max-width: 768px) {
     header h1 {
         font-size: 3rem;
-        padding-top: 10rem; /* Verhoogt de padding boven de titel voor betere zichtbaarheid op kleinere schermen */
+        padding-top: 10rem;
+        /* Verhoogt de padding boven de titel voor betere zichtbaarheid op kleinere schermen */
     }
 
     ul {
@@ -297,7 +425,8 @@ h1 [span] {
 
     .blok {
         flex-direction: column;
-        margin: 20px auto; /* Maakt de blokken verticaler en centert ze */
+        margin: 20px auto;
+        /* Maakt de blokken verticaler en centert ze */
     }
 
     .image-container img {
@@ -305,11 +434,13 @@ h1 [span] {
     }
 
     .photo-grid {
-        grid-template-columns: repeat(2, 2fr); /* Maakt 2 kolommen in plaats van 3 voor kleinere schermen */
+        grid-template-columns: repeat(2, 2fr);
+        /* Maakt 2 kolommen in plaats van 3 voor kleinere schermen */
     }
 
     .samenwerken {
-        flex-direction: column; /* Maakt de samenwerken sectie verticaal op kleinere schermen */
+        flex-direction: column;
+        /* Maakt de samenwerken sectie verticaal op kleinere schermen */
     }
 
     .samenwerken .shape-container {
@@ -328,9 +459,10 @@ h1 [span] {
         font-size: 2rem;
         padding-top: 20rem;
     }
-    
+
     ul {
-        display: none; /* Verbergt de navigatie op mobiele schermen */
+        display: none;
+        /* Verbergt de navigatie op mobiele schermen */
     }
 
     .blok {
@@ -340,13 +472,15 @@ h1 [span] {
     h2 {
         font-size: 2rem;
     }
-  
+
     .footer .footer-container {
         flex-direction: column;
-        text-align: center; /* Zorgt ervoor dat de footer-secties onder elkaar komen op mobiele schermen */
+        text-align: center;
+        /* Zorgt ervoor dat de footer-secties onder elkaar komen op mobiele schermen */
     }
 
     .photo-grid {
-        grid-template-columns: repeat(1, 1fr); /* Maakt de grid 1 kolom breed op mobiele schermen */
+        grid-template-columns: repeat(1, 1fr);
+        /* Maakt de grid 1 kolom breed op mobiele schermen */
     }
 }
