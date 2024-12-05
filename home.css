@@ -1,0 +1,383 @@
+* {
+    scroll-behavior: smooth; /* Zorgt voor vloeiende scrollbewegingen */
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box; /* Zorgt ervoor dat padding en borders de afmetingen niet beïnvloeden */
+}
+
+/* nav lijst layout */
+ul {
+    color: var(--primary-text-color);
+    display: flex; /* Flexbox zorgt ervoor dat de nav-items in een rij staan */
+    justify-content: right; /* Plaatst de items rechts uitgelijnd */
+    gap: 70px; /* Ruimte tussen de items */
+    position: sticky; /* Zorgt ervoor dat de navigatie in beeld blijft bij scrollen */
+    margin: 0em 3em 1em 1em;
+    transition: transform .3s ease-in-out; /* Voegt een overgang toe voor de animatie */
+    list-style: none; /* Verwijdert de bullet points van de lijst */
+    z-index: 99; /* Zorgt ervoor dat de navigatie boven andere elementen komt */
+    text-decoration: none; /* Verwijdert standaard onderlijning */
+}
+
+/* nav op hover */
+ul :hover {
+    transform: scale(1.1); /* Vergroot de nav-items wanneer eroverheen wordt gehoverd */
+    text-decoration: underline; /* Voegt een onderstreping toe bij hover */
+}
+
+/* nav items */
+li {
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+/* logo plaatje */
+.logo {
+    margin: 0px;
+    width: 100px;
+    position: sticky; /* Zorgt ervoor dat het logo in beeld blijft bij scrollen */
+    left: 2rem;
+    top: 2rem;
+}
+
+/* header */
+header {
+    background-image: url(./assets/varen.jpg); /* Achtergrondafbeelding voor de header */
+    background-size: cover; /* Zorgt ervoor dat de afbeelding de volledige header bedekt */
+    height: 80vh; /* Maakt de hoogte van de header 80% van de viewport hoogte */
+    padding: 0em 0em 5em 0em;
+}
+
+/* tekst onder titel in header */
+header h2 {
+    color: var(--primary-text-color);
+    z-index: 90; /* Zorgt ervoor dat de tekst boven andere elementen komt */
+    position: relative;
+    text-align: center;
+    padding: 0em 0em 5em 0em;
+}
+
+/* nav linkjes in header */
+header a {
+    z-index: 99; /* Zorgt ervoor dat de linkjes boven andere elementen komen */
+    position: relative;
+    color: var(--primary-text-color);
+    text-decoration: none; /* Verwijdert de standaard onderlijning */
+    font-size: clamp(1rem, 0.9559rem + 0.2353vw, 1.25rem); /* Dynamische font-grootte afhankelijk van het scherm */
+}
+
+/* gradient over background image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    background: var(--image-gradient); /* Gradient die over de achtergrondafbeelding komt */
+    z-index: 90;
+}
+
+/* hoofd titel in header */
+h1 {
+    text-align: center;
+    color: var(--primary-text-color);
+    padding: 1em 0em 0em 0em;
+    z-index: 99;
+    position: relative;
+    font-size: clamp(4.0625rem, 3.4559rem + 3.2353vw, 7.5rem); /* Responsieve lettergrootte */
+}
+
+/* span in h1 */
+h1 span {
+    padding: 20px;
+}
+
+/* layout voor alle blokjes */
+.blok {
+    display: flex; /* Flexbox om de blokken dynamisch te plaatsen */
+    flex-direction: column; /* Plaatst de items in een kolom */
+    align-items: center; /* Centreert de items horizontaal */
+    border-radius: 15px; /* Ronde hoeken voor de blokken */
+    min-width: 25rem;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schaduw rond de blokken */
+    font-weight: 400;
+    margin-top: -20px;
+    max-width: 1400px;
+}
+
+/* titels van blokjes */
+.kleur1,
+.kleur2,
+.kleur3,
+.kleur4 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.kleur1 {
+    color: var(--secondary-background-color);
+}
+
+.kleur2 {
+    color: var(--secondary-highlight-color);
+}
+
+.kleur3 {
+    color: var(--primary-background-color);
+}
+
+.kleur4 {
+    color: var(--primary-highlight-color);
+}
+
+/* tekstkleur in blokjes */
+.tekstkleur1 {
+    color: var(--secondary-background-color);
+}
+
+.tekstkleur2 {
+    color: var(--secondary-highlight-color);
+}
+
+.tekstkleur3 {
+    color: var(--primary-background-color);
+}
+
+.tekstkleur4 {
+    color: var(--primary-highlight-color);
+}
+
+/* tekst in blokje */
+p {
+    margin-bottom: 20px;
+}
+
+/* layout tekst in blokjes */
+.content {
+    width: 80%;
+}
+
+/* plaatje instellingen */
+.image-container img {
+    width: 80%;
+    margin: 1em;
+    border-radius: 15px;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding netjes bijgesneden wordt */
+}
+
+/* tekst stukje over buurtcampus oost */
+.buurtcampus {
+    display: flex; /* Flexbox voor dynamische plaatsing van de tekst en afbeelding */
+    justify-content: space-between; /* Zorgt voor ruimte tussen de items */
+    align-items: center;
+    padding: 40px;
+    color: var(--secondary-text-color);
+    border-radius: 15px;
+    max-width: 100%;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* titel kopje buurtcampus */
+.buurtcampus h2 {
+    font-size: clamp(2.1875rem, 1.392rem + 2.6515vw, 4.375rem); /* Responsieve lettergrootte */
+    color: var(--secondary-text-color);
+    margin-bottom: 2%;
+}
+
+.buurtcampus .highlight {
+    color: var(--primary-highlight-color);
+    font-size: clamp(2.1875rem, 1.392rem + 2.6515vw, 4.375rem);
+    padding: 2%;
+}
+
+/* tekst buurtcampus */
+.buurtcampus p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10;
+    color: var(--secondary-text-color);
+    padding: 1%;
+}
+
+/* Sterke tekstkleur 'klik hier' */
+.buurtcampus p strong {
+    color: var(--main-color-green);
+}
+
+/* foto buurtcampus */
+.shape-container img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    position: sticky; /* Zorgt ervoor dat de afbeelding blijft staan bij scrollen */
+    right: 0;
+    bottom: 0;
+}
+
+/* layout hele stuk */
+.agendablok {
+    background-color: var(--third-background-color);
+    margin: 50;
+    padding: 1%;
+    position: relative;
+}
+
+.agendablok h2 {
+    color: var(--primary-background-color);
+    font-weight: 700;
+}
+
+/* scroll menu layout */
+div.scrollmenu {
+    overflow: auto; /* Zorgt ervoor dat de inhoud scrollt als het groter is dan het containergebied */
+    white-space: nowrap; /* Zorgt ervoor dat de items naast elkaar blijven staan */
+}
+
+div.scrollmenu a {
+    background-image: url(./assets/greenworkshop.jpg);
+    display: inline-block;
+    color: var(--primary-background-color);
+    text-align: center;
+    margin: 0;
+    padding: 5%;
+    text-decoration: none;
+    width: 25%;
+    transition: transform .3s; /* Voegt een overgang toe voor de animatie */
+    margin: 10px;
+    border-radius: 15px;
+}
+
+div.scrollmenu a:hover {
+    color: var(--primary-highlight-color);
+    transform: scale(1.1); /* Vergroot het item bij hover */
+}
+
+/* footer */
+.footer {
+    background-color: var(--primary-background-color);
+    padding: 1rem;
+    position: relative;
+}
+
+.footer .footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer .footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer .footer-column h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer .footer-column p,
+.footer .footer-column a {
+    font-size: 1rem;
+    color: var(--third-background-color);
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.footer .footer-column ul {
+    list-style-type: none;
+    display: block;
+    text-align: center;
+}
+
+.footer .footer-column ul li {
+    margin-bottom: 1em;
+}
+
+.footer .footer-column ul li a:hover {
+    text-decoration: underline;
+    color: var(--primary-highlight-color);
+}
+
+/* Media Queries */
+
+/* Tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+        padding-top: 10rem;
+    }
+
+    ul {
+        text-align: right;
+        gap: 20px;
+    }
+
+    .blok {
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .image-container img {
+        width: 90%;
+    }
+
+    .buurtcampus {
+        flex-direction: column; /* Zet de buurtcampus sectie in een kolom voor kleinere schermen */
+    }
+
+    .buurtcampus .shape-container {
+        width: 100%;
+    }
+
+    div.scrollmenu a {
+        margin: 0;
+        padding: 10%;
+        width: 50%;
+        margin: 15px;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+        padding-top: 15rem;
+    }
+
+    header h2 {
+        font-size: 1.8rem;
+    }
+
+    ul {
+        display: none; /* Verbergt de navigatie op mobiele schermen */
+    }
+
+    .blok {
+        margin: 10px auto;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    div.scrollmenu a {
+        margin: 0;
+        padding: 10%;
+        width: 50%;
+        margin: 15px;
+    }
+
+    .footer .footer-container {
+        flex-direction: column; /* Zorgt ervoor dat de footer-secties onder elkaar komen */
+        text-align: center;
+    }
+}

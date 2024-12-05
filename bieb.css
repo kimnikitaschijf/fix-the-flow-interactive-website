@@ -1,0 +1,352 @@
+* {
+    scroll-behavior: smooth; /* Zorgt voor vloeiende scrollbewegingen */
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box; /* Zorgt ervoor dat padding en borders de afmetingen niet beïnvloeden */
+}
+
+/* nav lijst layout */
+ul {
+    color: var(--primary-text-color);
+    display: flex; /* Flexbox om de nav-items in een rij te plaatsen */
+    justify-content: right; /* Zorgt dat de items rechts uitgelijnd worden */
+    gap: 70px; /* Creëert ruimte tussen de list-items */
+    position: sticky; /* Zorgt ervoor dat de nav sticky blijft bij scrollen */
+    margin: 0em 3em 1em 1em;
+    transition: transform .3s ease-in-out; /* Voeg een overgang toe voor animatie */
+    list-style: none; /* Verwijdert bullet points */
+    z-index: 99; /* Zorgt ervoor dat de nav boven andere elementen blijft */
+    text-decoration: none;
+}
+
+/* nav op hover */
+ul :hover {
+    transform: scale(1.1); /* Vergroot de tekst een beetje wanneer eroverheen wordt gehoverd */
+    text-decoration: underline; /* Voegt een onderstreping toe bij hover */
+}
+
+/* nav */
+li {
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+/* logo plaatje */
+.logo {
+    margin: 0px;
+    width: 100px;
+    position: sticky;
+    left: 2rem;
+    top: 2rem;
+    transition: transform .3s;
+}
+
+.logo :hover {
+    transform: scale(1.1); /* Vergroot het logo wanneer eroverheen wordt gehoverd */
+}
+
+/* header */
+header {
+    background-image: url(../assets/wp11667512-monstera-leaf-wallpapers.jpg);
+    background-size: cover;
+    height: 80vh;
+    padding: 0em 0em 5em 0em;
+    position: relative; /* Zorgt ervoor dat de header in de normale flow zit */
+}
+
+/* header titel */
+header h2 {
+    color: var(--primary-text-color);
+    z-index: 90;
+    position: relative;
+    text-align: center;
+    padding: 0em 0em 5em 0em;
+}
+
+/* nav linkjes */
+header a {
+    z-index: 99;
+    position: relative;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-size: clamp(1rem, 0.9559rem + 0.2353vw, 1.25rem); /* Zorgt voor responsieve lettergrootte */
+}
+
+/* gradient over background image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    background: var(--image-gradient);
+    z-index: 90;
+}
+
+/* titel header */
+.titel {
+    text-align: center;
+    color: var(--primary-text-color);
+    padding: 1em 0em 0em 0em;
+    z-index: 99;
+    position: relative;
+    font-size: clamp(4.0625rem, 3.4559rem + 3.2353vw, 7.5rem); /* Responsieve lettergrootte */
+}
+
+h1 [span] {
+    padding: 20px;
+}
+
+/* layout hele blok */
+.blok {
+    display: flex; /* Flexbox zorgt voor dynamische uitlijning van de inhoud */
+    flex-direction: column; /* Zet de inhoud in een kolom */
+    align-items: center;
+    border-radius: 15px;
+    min-width: 25rem;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+    margin-top: -20px;
+    max-width: 1400px;
+}
+
+/* Normal Flow: De kleuren behouden */
+.kleur1,
+.kleur2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.kleur1 {
+    color: var(--secondary-background-color);
+}
+
+.kleur2 {
+    color: var(--primary-background-color);
+}
+
+.tekstkleur1 {
+    color: var(--secondary-background-color);
+}
+
+.tekstkleur2 {
+    color: var(--primary-background-color);
+}
+
+/* photo-grid met grid layout */
+.photo-grid {
+    display: grid; /* Grid layout zorgt voor flexibele plaatsing van afbeeldingen */
+    grid-template-columns: repeat(3, 1fr); /* Maakt 3 gelijke kolommen */
+    grid-template-rows: repeat(3, 1fr); /* Maakt 3 gelijke rijen */
+    gap: 50px; /* Ruimte tussen de grid items */
+    padding: 20px;
+}
+
+/* photo styling */
+.photo {
+    background-image: url(../assets/Bieb+in+Bloei+logo+1.png);
+    width: 9rem;
+    transition: transform .3s;
+    border-radius: 10px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.photo:hover {
+    opacity: 0.8;
+    transform: scale(1.1); /* Vergroot de afbeelding bij hover */
+}
+
+/* layout tekst in blokjes */
+.content {
+    width: 80%;
+}
+
+/* plaatje instellingen */
+.image-container img {
+    width: 80%;
+    margin: 1em;
+    border-radius: 15px;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding netjes wordt bijgesneden */
+}
+
+/* tekst stukje over samenwerken */
+.samenwerken {
+    display: flex; /* Flexbox voor dynamische plaatsing van tekst en afbeelding */
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    color: var(--secondary-text-color);
+    border-radius: 15px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.samenwerken h2 {
+    font-size: clamp(2.1875rem, 1.392rem + 2.6515vw, 4.375rem);
+    color: var(--secondary-text-color);
+    margin-bottom: 2%;
+}
+
+.samenwerken .highlight {
+    color: var(--primary-highlight-color);
+    font-size: clamp(2.1875rem, 1.392rem + 2.6515vw, 4.375rem);
+}
+
+.samenwerken p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10;
+    color: var(--secondary-text-color);
+    padding: 1%;
+}
+
+.samenwerken p strong {
+    color: var(--third-background-color);
+}
+
+.shape-container {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
+
+.shape-container :hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.text {
+    display: none;
+    position: absolute;
+    top: 2em;
+    right: 5em;
+    width: 30%;
+}
+
+/* footer */
+.footer {
+    background-color: var(--primary-background-color);
+    padding: 1rem;
+    position: relative;
+}
+
+.footer .footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer .footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer .footer-column h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer .footer-column p,
+.footer .footer-column a {
+    font-size: 1rem;
+    color: var(--third-background-color);
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.footer .footer-column ul {
+    list-style-type: none;
+    display: block;
+    text-align: center;
+}
+
+.footer .footer-column ul li {
+    margin-bottom: 1em;
+}
+
+.footer .footer-column ul li a:hover {
+    text-decoration: underline;
+    color: var(--primary-highlight-color);
+}
+
+/* Media Queries */
+/* Tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+        padding-top: 10rem; /* Verhoogt de padding boven de titel voor betere zichtbaarheid op kleinere schermen */
+    }
+
+    ul {
+        text-align: right;
+        gap: 20px;
+    }
+
+    .blok {
+        flex-direction: column;
+        margin: 20px auto; /* Maakt de blokken verticaler en centert ze */
+    }
+
+    .image-container img {
+        width: 90%;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 2fr); /* Maakt 2 kolommen in plaats van 3 voor kleinere schermen */
+    }
+
+    .samenwerken {
+        flex-direction: column; /* Maakt de samenwerken sectie verticaal op kleinere schermen */
+    }
+
+    .samenwerken .shape-container {
+        width: 100%;
+    }
+
+    header h1,
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+        padding-top: 20rem;
+    }
+    
+    ul {
+        display: none; /* Verbergt de navigatie op mobiele schermen */
+    }
+
+    .blok {
+        margin: 10px auto;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+  
+    .footer .footer-container {
+        flex-direction: column;
+        text-align: center; /* Zorgt ervoor dat de footer-secties onder elkaar komen op mobiele schermen */
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(1, 1fr); /* Maakt de grid 1 kolom breed op mobiele schermen */
+    }
+}
