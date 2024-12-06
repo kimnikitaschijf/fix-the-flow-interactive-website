@@ -60,7 +60,7 @@ li {
 
 /* header */
 header {
-    background-image: url(../assets/wp11667512-monstera-leaf-wallpapers.jpg);
+    background-image: url(./assets/wp11667512-monstera-leaf-wallpapers.jpg);
     background-size: cover;
     height: 80vh;
     padding: 0em 0em 5em 0em;
@@ -272,7 +272,7 @@ h1 [span] {
 
 /* photo styling */
 .photo {
-    background-image: url(../assets/Bieb+in+Bloei+logo+1.png);
+    background-image: url(./assets/Bieb+in+Bloei+logo+1.png);
     width: 9rem;
     transition: transform .3s;
     border-radius: 10px;
